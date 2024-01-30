@@ -58,16 +58,16 @@ namespace UserApplication.Pages.Users
                 return NotFound();
             }
 
-            var student = await _context.Users.FindAsync(id);
+            var user = await _context.Users.FindAsync(id);
 
-            if (student == null)
+            if (user == null)
             {
                 return NotFound();
             }
 
             try
             {
-                _context.Users.Remove(student);
+                _context.Users.Remove(user);
                 await _context.SaveChangesAsync();
                 return RedirectToPage("./Index");
             }

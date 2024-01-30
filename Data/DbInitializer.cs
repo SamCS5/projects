@@ -7,7 +7,6 @@ namespace UserApplication.Data
     {
         public static void Initialize(UserApplicationContext context)
         {
-            // Look for any students.
             if (context.Users.Any())
             {
                 return;   // DB has been seeded
